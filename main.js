@@ -42,7 +42,7 @@ client.on(Events.InteractionCreate, async interaction => {
     if (interaction.commandName === 'traduza') {
         const message = interaction.options.getString('mensagem');
         try {
-            await interaction.reply({content: 'Estou traduzindo...', withResponse: true});
+            await interaction.reply({content: `Estou traduzindo ${message.length < 80 ? message : 'essa biblia que tu mandou'}...`, withResponse: true});
             const response = await translateAPIMessage(message);
             await interaction.followUp(response);
         } catch (error) {
@@ -79,4 +79,4 @@ const translateAPIMessage = async (message) => {
       return data.response;
  };
 
-client.login(values.TOKEN);
+client.login(process.env.VOCE_SABIA_TOKEN);
