@@ -13,3 +13,5 @@ A discord bot created to use with ollama API, making local requests to get respo
   
     - Linux: `export VOCE_SABIA_TOKEN=[your bot token]`
     - Windows: `set [VOCE_SABIA_TOKEN=[your bot token]]`
+
+-  7. Finally, run bot with `npm start`
